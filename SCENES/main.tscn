@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bhrucg3p0s1oy"]
+
+[ext_resource type="Script" uid="uid://bnysw5rcw47lx" path="res://SCRIPTS/main.gd" id="1_i3vxn"]
+[ext_resource type="Script" uid="uid://vk2i5csilp5h" path="res://SCRIPTS/h_menu.gd" id="2_jsldp"]
+[ext_resource type="PackedScene" uid="uid://ccbyubwilg1lo" path="res://SCENES/plugin_manager.tscn" id="3_0u8pi"]
+
+[node name="main" type="Control" unique_id=1255003956]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=567934014]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 649.0
+color = Color(0.9999997, 0.99984974, 0.9217273, 1)
+
+[node name="File" type="VBoxContainer" parent="." unique_id=1273631870]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 53.0
+offset_right = 80.0
+offset_bottom = 119.0
+alignment = 1
+
+[node name="Open File" type="Button" parent="File" unique_id=767543681]
+layout_mode = 2
+text = "Open File"
+
+[node name="Save File" type="Button" parent="File" unique_id=400752276]
+layout_mode = 2
+text = "Save File"
+
+[node name="Save As" type="Button" parent="File" unique_id=4065892]
+layout_mode = 2
+text = "Save As"
+
+[node name="Plugins" type="VBoxContainer" parent="." unique_id=333579296]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 53.0
+offset_right = 276.0
+offset_bottom = 93.0
+
+[node name="Import Plugin" type="Button" parent="Plugins" unique_id=1859079446]
+layout_mode = 2
+text = "Import Plugin"
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1080311634]
+unique_name_in_owner = true
+script = ExtResource("1_i3vxn")
+
+[node name="Content" type="TextEdit" parent="." unique_id=1043274457]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 0
+offset_left = 174.0
+offset_top = 162.0
+offset_right = 1074.0
+offset_bottom = 562.0
+minimap_draw = true
+minimap_width = 100
+draw_tabs = true
+
+[node name="HMenu" type="Node" parent="." unique_id=722101617]
+unique_name_in_owner = true
+script = ExtResource("2_jsldp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HMenu" unique_id=1040547246]
+offset_left = 175.0
+offset_top = 119.0
+offset_right = 215.0
+offset_bottom = 159.0
+
+[node name="PluginManager" parent="." unique_id=216166671 instance=ExtResource("3_0u8pi")]
+unique_name_in_owner = true
+
+[node name="PluginContainer" type="HBoxContainer" parent="PluginManager" unique_id=1521566753]
+unique_name_in_owner = true
+offset_left = 410.0
+offset_top = 54.0
+offset_right = 450.0
+offset_bottom = 94.0
+
+[connection signal="pressed" from="File/Open File" to="FileDialog" method="_on_open_pressed"]
+[connection signal="pressed" from="File/Save File" to="FileDialog" method="_on_save_file_pressed"]
+[connection signal="pressed" from="File/Save As" to="FileDialog" method="_on_save_as_pressed"]
+[connection signal="pressed" from="Plugins/Import Plugin" to="FileDialog" method="_on_add_file_as_plugin_pressed"]

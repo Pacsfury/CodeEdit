@@ -1,0 +1,12 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1783861265
+icon.svg::CompressedTexture2D::7283056861558907900::1783861227::1783861266::1::::<><><>0<>0<>43b2873e149f1361c49f76cdb3dacd8c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://PLUGINS/::1783861230
+godotsupport.gd::GDScript::5879303187804270266::1783861221::0::1::::<>Object<><>0<>0<><>::
+::res://SCENES/::1783861230
+main.tscn::PackedScene::2914055281531785308::1783861222::0::1::::<><><>0<>0<><>::uid://bnysw5rcw47lx::::res://SCRIPTS/main.gd<>uid://vk2i5csilp5h::::res://SCRIPTS/h_menu.gd<>uid://ccbyubwilg1lo::::res://SCENES/plugin_manager.tscn
+plugin_manager.tscn::PackedScene::4916776443008316364::1783861223::0::1::::<><><>0<>0<><>::uid://pmkt805m1bdg::::res://SCRIPTS/plugin_manager.gd
+::res://SCRIPTS/::1783861230
+h_menu.gd::GDScript::1496264718714303703::1783861224::0::1::::<>Node<><>0<>0<><>::
+main.gd::GDScript::3349554512504287573::1783861225::0::1::::<>FileDialog<><>0<>0<><>::
+plugin_manager.gd::GDScript::1078248060901847808::1783861226::0::1::::<>Node<><>0<>0<><>::

@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://ccbyubwilg1lo"]
-
-[ext_resource type="Script" uid="uid://pmkt805m1bdg" path="res://SCRIPTS/plugin_manager.gd" id="1_noh40"]
-
-[node name="PluginManager" type="Node" unique_id=216166671]
-script = ExtResource("1_noh40")
